@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                        result="goo"></feColorMatrix>
+                    <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                </filter>
+            </defs>
+        </svg>
+    </header>
+
+    <div class="container">
+        <img src="https://i.pinimg.com/564x/3d/d5/54/3dd5541aca6d2762d0f35f14df1f48fb.jpg" class="logo" alt="Logo">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="What's on your mind today?">
+            <button onclick="performSearch()"><span>Search</span></button>
+        </div>
+
+        <!-- Search history box -->
+        <div class="search-history-box">
+            <button id="clearHistoryButton" class="clear-button" onclick="clearSearchHistory()">Clear History</button>
+            <ul id="historyList" class="search-history"></ul>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
